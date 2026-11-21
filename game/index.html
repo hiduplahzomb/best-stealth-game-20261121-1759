@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nightshade — The Ashen Museum</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0a0c10; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game { display: block; width: min(100vw, 150vh); height: auto; max-height: 100vh; touch-action: none; }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<canvas id="game" width="960" height="640" aria-label="Nightshade: a top-down stealth game. Sneak through the museum, steal the relics, and reach the exit unseen."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
